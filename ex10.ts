@@ -1,4 +1,4 @@
-function addSecondsToTime(time, x) {
+function addSecondsToTime(time: string, x: number) {
     if (x > 1000) {
         throw new Error("Giá trị x không được vượt quá 1000");
     }
@@ -32,12 +32,12 @@ function addSecondsToTime(time, x) {
 }
 
 
-function padZero(number) {
+function padZero(number: number) {
     return number.toString().padStart(2, "0");
 }
 try {
     const newTime = addSecondsToTime("12:30:45", 1000);
     console.log(newTime); //12:47:25
-} catch (error) {
+} catch (error:any) {
     console.log(error.message);
 }

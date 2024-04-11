@@ -1,5 +1,5 @@
-function countdownToNextYear() {
-    const today = new Date(); 
+function countdownToNextYear(day:Date) {
+    const today = new Date(day); 
     const nextYear = today.getFullYear() + 1; 
     const newYear = new Date(nextYear, 0, 1); 
     const timeDifference = newYear.getTime() - today.getTime(); 
@@ -7,5 +7,5 @@ function countdownToNextYear() {
     
     return daysRemaining;
   }
-
-  console.log(countdownToNextYear()); 
+  const now = new Date('2024-1-1');
+  console.log(countdownToNextYear(now)); //366

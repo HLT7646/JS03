@@ -1,4 +1,4 @@
-function calculateMinutes(hours, minutes) {
+function calculateMinutes(hours: number, minutes: number) {
     let totalMinutes = hours * 60 + minutes;
     return totalMinutes;
   }
